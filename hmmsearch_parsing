@@ -1,0 +1,15 @@
+# Code used to process the output from the HMM search.
+
+pip install biopython
+
+
+from Bio import SearchIO
+
+hmmsearch_results_file = 'hmmsearch.out'
+
+# parse hmmsearch results using SearchIO
+hmmsearch_results = SearchIO.read(hmmsearch_results_file, 'hmmer3-text')
+
+# iterate through hits
+for hit in hmmsearch_results.hits:
+    print(f"Query: {hmmsearch_results.id}, Hit: {hit.id}, E-value: {hit.evalue}, Score: {hit.bitscore}")
