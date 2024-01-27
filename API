@@ -1,3 +1,7 @@
+## This code was written to utilise UniProt's REST API.
+## This is done in order to retrieve APC-like sequence entries to form the curated database for the hmmsearch analysis.
+
+
 import requests
 import json
 
